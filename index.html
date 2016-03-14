@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Clojure Newbie Guide</title>
+  <meta name="description" content="A quick guide for clojure newbies">
+  <meta name="author" content="Kiran Gangadharan">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <style>
+   body {
+     font-family: 'PT Sans';
+     font-size: 2.0rem;
+     color: rgba(0, 0, 0, 0.5);
+
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+   }
+
+   h1, h2, h3, h4 {
+     font-weight: 100;
+     color: rgba(0, 0, 0, 0.9);
+   }
+
+   h1 {
+     font-family: 'Source Serif Pro';
+     font-weight: 400;
+     font-size: 4em;
+     color: rgba(0,0,0,0.7);
+   }
+
+   p {
+     font-size: 1.8rem;
+     letter-spacing: 0.05em;
+   }
+
+   pre {
+     font-family: 'Source Code Pro';
+     font-size: 0.8em;
+   }
+
+   h4 {
+     text-transform: uppercase;
+     letter-spacing: 0.1rem;
+     margin-top: 10%;
+     font-family: 'Raleway';
+     font-weight: 400;
+     font-size: 1.3em;
+     color: rgba(0,0,0,1);
+   }
+
+   h5 {
+     text-transform: uppercase;
+     letter-spacing: .1rem;
+     font-family: 'Raleway'
+   }
+
+   ul {
+     list-style-type: disc;
+      //margin-bottom: 15%
+      }
+
+   a {
+     text-decoration: none;
+     //background-image: linear-gradient(to bottom,rgba(0,0,0,0) 50%,rgba(0,0,0,.6) 50%);
+     background-image: linear-gradient(to bottom,#b71c1c 50%,#F44336 50%);
+     background-repeat: repeat-x;
+     background-size: 1px 1px;
+     background-position: 0 1.1em;
+     color: #b71c1c;
+   }
+  </style>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row" style="margin-top: 15%;">
+      <h1>A Clojure Newbie Guide</h1>
+      <div class="twelve columns">
+        <p>A quick guide to Clojure and it's ecosystem for newbies.</p>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 15%">
+      <!-- Section 1 -->
+      <h4 id="whats-the-official-website">What's the official website?</h4>
+        <p>That would be <a href="http://clojure.org">clojure.org</a></p>
+
+      <!-- Section 2 -->
+      <h4 id="wanna-try-clojure-before-installing">Wanna try Clojure before installing?</h4>
+      <p>Checkout the online REPL at <a href="http://www.tryclj.com/" class="uri">tryclj.com</a></p>
+
+      <!-- Section 3 -->
+      <h4 id="whats-the-quickest-way-to-get-started">What's the quickest way to get started?</h4>
+      <p>Check if Java is installed in your system by running:
+        <pre><code>java -version</code></pre>
+        If not, follow the necessary instructions based on your OS.</p>
+      <h5 id="os-x">OS X/Linux/Windows</h5>
+      <ul>
+        <li>Install <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java</a> (a.k.a JDK)</li>
+        <li>Install <a href="http://leiningen.org/#install">Leiningen</a></li>
+        <li>Start a REPL by running:
+          <pre><code>lein repl</code></pre>
+        </li>
+        <br/>
+        <p>OS X users can also install Leiningen using Homebrew:
+          <pre><code>brew install leiningen</code></pre>
+      </ul>
+
+      <!-- Section 4 -->
+      <h4 id="what-about-the-editor">What about my editor setup?</h4>
+      <ul>
+        <li>Emacs
+          <ul>
+            <li><a href="https://github.com/clojure-emacs/cider">Cider</a> </li>
+          </ul>
+        </li>
+        <li>Vim
+          <ul>
+            <li> <a href="https://github.com/guns/vim-clojure-static">vim-clojure-static</a> </li>
+            <li> <a href="https://github.com/tpope/vim-fireplace">vim-fireplace</a> </li>
+          </ul>
+        </li>
+        <li>Sublime Text
+          <ul><li><a href="https://github.com/wuub/SublimeREPL">SublimeREPL</a></li></ul>
+        </li>
+        <li><a href="http://lighttable.com/" class="uri">LightTable</a></li>
+        <li><a href="https://cursive-ide.com/">Cursive</a> (IntelliJ plugin)</li>
+        <li><a href="http://doc.ccw-ide.org/">Counterclockwise</a> (Eclipse Plugin)</li>
+      </ul>
+      <br/>
+      <p>If you're looking for a simple, standalone solution, try LightTable.</p>
+
+      <!-- Section 5 -->
+      <h4 id="what-code-conventions-to-follow">What code conventions to follow?</h4>
+      <ul>
+        <li>A community coding style guide is available <a href="https://github.com/bbatsov/clojure-style-guide" class="uri">here</a>.</li>
+      </ul>
+
+      <!-- Section 6 -->
+      <h4 id="want-some-exercises-to-do">Want some exercises to do?</h4>
+      <ul>
+        <li><a href="http://4clojure.com/">4clojure.com</a> <i>Highly Recommended</i></li>
+        <li><a href="http://exercism.io/languages/clojure">exercism.io</a></li>
+      </ul>
+
+     <!-- Section 7 -->
+      <h4 id="looking-for-a-cheatsheet">Looking for a cheatsheet?</h4>
+      <ul>
+        <li><a href="http://clojure.org/api/cheatsheet" class="uri">http://clojure.org/api/cheatsheet</a></li>
+        <li><a href="https://jafingerhut.github.io/" class="uri">https://jafingerhut.github.io/</a></li>
+      </ul>
+
+      <h4 id="talks">Want to watch some awesome talks?</h4>
+      <ul>
+        <li><a href="https://youtu.be/VSdnJDO-xdg">Clojure Made Simple</a> - Rich Hickey explains Clojure</li>
+      </ul>
+
+      <!-- Section 8 -->
+      <h4 id="books">Books</h4>
+      <ul>
+        <li><a href="http://www.braveclojure.com/">Clojure for the Brave and True</a> (HTML version available)</li>
+        <li><a href="https://pragprog.com/book/shcloj2/programming-clojure">Programming Clojure</a></li>
+        <li><a href="http://www.clojurebook.com/">Clojure Programming</a></li>
+      </ul>
+
+      <!-- Section 9 -->
+      <h4 id="newsletters">Good Newsletters</h4>
+      <ul>
+        <li><a href="http://www.clojuregazette.com/">Clojure Gazette</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
