@@ -1,0 +1,94 @@
+body {
+    font-family: 'PT Sans';
+    font-size: 2.0rem;
+    color: rgba(0, 0, 0, 0.5);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+h1 {
+    font-family: 'Source Serif Pro';
+    font-weight: 400;
+    font-size: 4em;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+p {
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;
+}
+
+pre {
+    font-family: 'Source Code Pro';
+    font-size: 0.8em;
+}
+
+h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 10%;
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 1.3em;
+    color: rgba(0, 0, 0, 1);
+}
+
+h5 {
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-family: 'Raleway'
+}
+
+ul {
+    list-style-type: disc;
+    //margin-bottom: 15%
+}
+
+#logos li {
+    display: inline-block;
+}
+
+#logos a {
+    background-image: none;
+}
+
+a {
+    text-decoration: none;
+    //background-image: linear-gradient(to bottom,rgba(0,0,0,0) 50%,rgba(0,0,0,.6) 50%);
+    background-image: linear-gradient(to bottom, #b71c1c 50%, #F44336 50%);
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    background-position: 0 1.1em;
+    color: #b71c1c;
+}
+
+a:hover {
+    color: #333332;
+    background-image: linear-gradient(to bottom, #333332 50%, #333332 50%);
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    background-position: 0 1.1em;
+}
+
+.seperator {
+    color: lightgray;
+}
+
+#footer {
+    text-align: center;
+    margin-top: 8%;
+    font-size: 0.7em;
+    margin-bottom: 2%;
+}
+
+#heart {
+    color: #b71c1c;
+}
